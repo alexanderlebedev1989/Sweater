@@ -1,0 +1,40 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/target/classes/org/example/sweater/Application.class
+/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/target/classes/templates/greeting.mustache
+/target/classes/org/example/sweater/GreetingController.class
+/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/target/classes/templates/main.mustache
+/target/maven-archiver/pom.properties
+/target/Sweater-1.0-SNAPSHOT.jar
+/target/Sweater-1.0-SNAPSHOT.jar.original
+/target/SweaterApp-1.0-SNAPSHOT.jar
+/target/SweaterApp-1.0-SNAPSHOT.jar.original
