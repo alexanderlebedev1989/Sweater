@@ -25,6 +25,7 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+/target/
 /target/classes/org/example/sweater/Application.class
 /target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
 /target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
