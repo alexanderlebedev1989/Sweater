@@ -2,7 +2,9 @@ package org.example.sweater.controller;
 
 import lombok.AllArgsConstructor;
 import org.example.sweater.domain.Message;
+import org.example.sweater.domain.User;
 import org.example.sweater.repo.MessageRepo;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,8 +32,11 @@ public class MainController {
     }
 
     @PostMapping("/main")
-    public String add(@RequestParam String text, @RequestParam String tag, Map<String, Object> model) {
-        Message message = new Message(text, tag);
+    public String add(
+            @AuthenticationPrincipal User user,
+            @RequestParam String text,
+            @RequestParam String tag, Map<String, Object> model) {
+        Message message = new Message(text, tag, user);
         repo.save(message);
 
         Iterable<Message> messages = repo.findAll();
