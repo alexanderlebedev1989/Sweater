@@ -1,4 +1,4 @@
-package org.example.sweater;
+package org.example.sweater.controller;
 
 import lombok.AllArgsConstructor;
 import org.example.sweater.domain.Message;
@@ -13,25 +13,23 @@ import java.util.Map;
 
 @Controller
 @AllArgsConstructor
-public class GreetingController {
+public class MainController {
 
     private final MessageRepo repo;
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
-                           Map<String, Object> model) {
-        model.put("name", name);
+    @GetMapping("/")
+    public String greeting(Map<String, Object> model) {
         return "greeting";
     }
 
-    @GetMapping
+    @GetMapping("/main")
     public String main(Map<String, Object> model) {
         Iterable<Message> messages = repo.findAll();
         model.put("messages", messages);
         return "main";
     }
 
-    @PostMapping
+    @PostMapping("/main")
     public String add(@RequestParam String text, @RequestParam String tag, Map<String, Object> model) {
         Message message = new Message(text, tag);
         repo.save(message);
